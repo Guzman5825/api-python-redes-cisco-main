@@ -1,4 +1,4 @@
-# Entorno de virtualización Python
+# verificar
 
 # Pasos de instalación en Linux:
 
