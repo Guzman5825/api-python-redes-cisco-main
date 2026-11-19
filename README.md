@@ -4,7 +4,7 @@
 
 ## 1. Clonación del proyecto
 
-Desde la terminal ejecutar:
+verificar cambis:
 
 **git clone** <URL_del_repositorio> <nombre_de_la_carpeta_de_destino>
 
