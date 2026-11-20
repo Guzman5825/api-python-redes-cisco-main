@@ -52,6 +52,11 @@ python 05_informe_de_dispositivos.py   # 5. Generar informe (CSV + JSON)
 
 ## Autores
 
-Grupo NN – Redes de Computadoras (3643)
+Grupo 05 – Redes de Computadoras (3643)
 
-*(Completar con los nombres de los integrantes.)*
+Guzman, Edilberto 
+Perla, Gustavo Tobias 
+Vescovo, Ian Tomas 
+Morales Pessacq, Bruno 
+Barbieri Alvez, Santiago Tomas 
+Bombace, Lautaro Nahuel  
