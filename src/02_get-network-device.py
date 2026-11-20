@@ -1,20 +1,36 @@
-import json
+
 import requests
+
 api_url = "http://localhost:58000/api/v1/network-device"
 
-headers={"X-Auth-Token": "NC-144-d131174a867340c3a5a8-nbi"}
+headers = {
+    "X-Auth-Token": "NC-3-b3f0b4159b62498385bd-nbi"
+}
 
+# Solicitar los dispositivos a la API
 resp = requests.get(api_url, headers=headers)
 
-print("Request status: ", resp.status_code)
+print("Request status:", resp.status_code)
 
-response_json = resp.json()
-print()
-print()
-print (response_json)
-print()
-print()
-networkDevices = response_json["response"]
+# Verificar que la solicitud haya sido exitosa
+if resp.status_code == 200:
 
-for networkDevice in networkDevices:
-    print(networkDevice["hostname"], "\t", networkDevice["platformId"], "\t", networkDevice["managementIpAddress"])
+    response_json = resp.json()
+
+    networkDevices = response_json.get("response", [])
+
+    print("\n========== DISPOSITIVOS DE RED ==========\n")
+
+    for networkDevice in networkDevices:
+
+        print(
+            networkDevice.get("hostname", "Sin hostname"),
+            "\t",
+            networkDevice.get("platformId", "Sin plataforma"),
+            "\t",
+            networkDevice.get("managementIpAddress", "Sin IP")
+        )
+
+else:
+    print("Error al consultar la API:")
+    print(resp.text)
